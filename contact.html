@@ -100,7 +100,7 @@
             <td>{{user.lastName | uppercase}}</td>
             <td>{{user.dob}}</td>
             <td>{{user.country}}</td>
-            <td>{{user.phone | phoneFilter:'india'}}</td>
+            <td>{{user.phone}}</td>
         </tr>
            </tbody>
 </table>
@@ -145,5 +145,6 @@
   <script type="text/javascript" src="app/controllers/registerCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/userCtrl.js"></script>
     <script type="text/javascript" src="app/Filters/phoneFilter.js"></script>
+    <script type="text/javascript" src="app/Factories/userDataFactory.js"></script>
 </body>
 </html>
