@@ -91,14 +91,16 @@
             <th>Last Name</th>
             <th>dob</th>
             <th>Country</th>
+            <th>Phone</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="user in users">
             <td>{{user.firstName}}</td>
-            <td>{{user.lastName}}</td>
+            <td>{{user.lastName | uppercase}}</td>
             <td>{{user.dob}}</td>
             <td>{{user.country}}</td>
+            <td>{{user.phone | phoneFilter:'india'}}</td>
         </tr>
            </tbody>
 </table>
@@ -142,5 +144,6 @@
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers/registerCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/userCtrl.js"></script>
+    <script type="text/javascript" src="app/Filters/phoneFilter.js"></script>
 </body>
 </html>
