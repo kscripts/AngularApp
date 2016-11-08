@@ -83,7 +83,7 @@
   <p>{{lastName}}</p> -->
 </div>
 
-<div ng-controller="userCtrl">
+<div ng-controller="editProfileCtrl">
   <table class="table">
     <thead>
         <tr>
@@ -95,20 +95,43 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="user in users">
-            <td>{{user.firstName}}</td>
+        <tr ng-repeat="user in users" >
+            <td><label  ng-click="user.isEdit=!user.isEdit"ng-bind="user.firstName" ng-show="!user.isEdit"></label><input type="text" ng-model="user.firstName" ng-show="user.isEdit" name=""></td>
             <td>{{user.lastName | uppercase}}</td>
             <td>{{user.dob}}</td>
             <td>{{user.country}}</td>
             <td>{{user.phone}}</td>
+            <td><button class="btn btn-primary" ng-click="edit(user)" >Edit</button></td>
         </tr>
            </tbody>
 </table>
 </div>
 
 
-
-
+<div ng-controller="editProfileCtrl">
+  <table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>dob</th>
+            <th>Country</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users" >
+        <td>{{user.firstName}}</td>
+            <td>{{user.lastName | uppercase}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.country}}</td>
+            <td>{{user.phone}}</td>
+            <td><button class="btn btn-primary" ng-click="edit(user)" >Edit</button></td>
+        </tr>
+           </tbody>
+</table>
+</div>
+ 
   <nav class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container-fluid">
     <div class="row">
@@ -144,6 +167,8 @@
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers/registerCtrl.js"></script>
     <script type="text/javascript" src="app/controllers/userCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/userProfile.js"></script>
+
     <script type="text/javascript" src="app/Filters/phoneFilter.js"></script>
     <script type="text/javascript" src="app/Factories/userDataFactory.js"></script>
 </body>
