@@ -1,0 +1,8 @@
+.carousel-inner > .item > img{
+    width: 40%;
+    margin: auto;
+}
+
+#myCarousel{
+  	margin-top: 60px;
+}
