@@ -64,7 +64,9 @@
     </div>
     <div class="form-group">
          <label for="inputCountry">Country</label>
-         <select class="form-control" id="ddlcountry" ng-model="selectedLocation" ng-options="location.country for location in locations">
+         <select class="form-control" id="ddlcountry" ng-model="selectedLocation" ng-options="location.country for location in locations" ng-change="dropdownChange()">
+        <!--  <label for="inputStates">States</label>
+         <select class="form-control" id="ddlstate" ng-model="selectedState" ng-options="location.state for state in states" ng-change="dropdownChange()"> -->
            
            <!-- <option value="IN">India</option>
            <option value="US">India</option>
@@ -79,8 +81,27 @@
   <!-- <b>First Name</b>
   <input type="text" ng-model="firstName">
   <p>{{lastName}}</p> -->
+</div>
 
-
+<div ng-controller="userCtrl">
+  <table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>dob</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.country}}</td>
+        </tr>
+           </tbody>
+</table>
 </div>
 
 
@@ -116,7 +137,10 @@
 
 
 
+
+
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers/registerCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/userCtrl.js"></script>
 </body>
 </html>

@@ -19,13 +19,27 @@ function registerFn($scope){
 	$scope.locations=[{
           country:"india",
           code:"IN",
-          state:"telangana",
          },
          {
          country:"United States",
          code:"US"
          }
 	];
+	
+	$scope.dropdownChange= function(){
+        console.log($scope.selectedLocation);
+
+	}
+
+	// $scope.states=[{
+ //          state:"Andhra Pradesh",
+ //          city:"vijaywada",
+ //         },
+ //         {
+ //         state:"telangana",
+ //         city:"warangal"
+ //         }
+	// ];
 	
         
 
