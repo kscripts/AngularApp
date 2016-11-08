@@ -11,7 +11,7 @@ function registerFn($scope){
 		Phone:""
 	};
 	$scope.registerUser= function(){
-        console.log($scope.registerDetails);
+        console.log($scope.locations);
 
 
 	};
